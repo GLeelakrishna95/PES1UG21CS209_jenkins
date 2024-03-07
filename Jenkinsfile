@@ -5,12 +5,12 @@ pipeline {
 //            steps {
 //                checkout([$class: 'GitSCM',
 //                    branches: [[name: '*/main']],
-//                    userRemoteConfigs: [[url: 'https://github.com/Gopikrishna-G/PES1UG21CS208_Jenkins.git']]])
+//                    userRemoteConfigs: [[url: 'https://github.com/GLeelakrishna95/PES1UG21CS209_jenkins.git']]])
 //            }
 //        }
         stage('Build') {
             steps {
-                build 'PES2UG19CS159-1'
+                build 'PES1UG21CS209-1'
                 sh 'g++ main.cpp -o output'
             }
         }
@@ -28,7 +28,7 @@ pipeline {
 
     post{
        failure{
-           error: 'Pipeline failed'
+           error 'Pipeline failed'
        } 
     } 
 }
