@@ -9,8 +9,8 @@ pipeline {
 //            }
 //        }
         stage('Build') {
-            steps 
-                build 'PES1UG21CS209-1'
+            steps {
+                build 'PES1UG21CS209-6'
                 sh 'g++ main.cpp -o output'
             }
         }
